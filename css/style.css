@@ -1241,6 +1241,14 @@ body.nav-open {
   color: #ecfeff;
   font-size: 0.7rem;
   animation: live-pulse 2.2s ease-in-out infinite;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.project-showcase__live:hover {
+  border-color: rgba(34, 211, 238, 0.85);
+  color: #fff;
 }
 
 @keyframes live-pulse {
@@ -1297,6 +1305,14 @@ body.nav-open {
 .project-showcase__body p {
   margin: 0;
   color: var(--text-muted);
+}
+
+.project-showcase__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.25rem;
 }
 
 .tech-list {
