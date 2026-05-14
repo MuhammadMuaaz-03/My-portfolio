@@ -568,9 +568,10 @@ body.nav-open {
   width: min(1200px, 100% - 2rem);
   margin-inline: auto;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2.25rem, 5vw, 3.5rem);
-  align-items: start;
+  /* Equal horizontal halves: photo | name & copy */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
   justify-items: stretch;
 }
 
@@ -638,7 +639,7 @@ body.nav-open {
 }
 
 .hero__intro {
-  max-width: 34rem;
+  max-width: 100%;
   color: var(--text-muted);
   margin: 0 0 1.75rem;
 }
@@ -737,13 +738,26 @@ body.nav-open {
 
 .hero__copy {
   width: 100%;
+  min-width: 0;
 }
 
 .hero__visual {
   position: relative;
   justify-self: center;
   width: min(100%, 320px);
-  margin-top: 0.5rem;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: clamp(2rem, 5vw, 2.75rem);
+  }
+
+  .hero__visual {
+    justify-self: center;
+  }
 }
 
 .hero__orb {

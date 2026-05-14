@@ -277,7 +277,7 @@
   const typingEl = document.getElementById("typing-text");
   const phrases = [
     "Building interfaces with clarity and motion.",
-    "Exploring Flutter, React Native, and modern web stacks.",
+    "Deepening Python, C++, JavaScript, and multi-LLM integration.",
     "Pairing craft with AI-assisted workflows.",
   ];
 
